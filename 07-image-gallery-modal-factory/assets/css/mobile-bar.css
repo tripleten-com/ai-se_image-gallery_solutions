@@ -1,0 +1,36 @@
+@media screen and (max-width: 805px) {
+  .page {
+    padding-bottom: 100px;
+  }
+
+  /* Faded bar behind the fixed button */
+  .page::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 156px;
+    background: linear-gradient(to bottom, transparent 0%, #ececec 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .gallery__new-image-btn {
+    position: fixed;
+    bottom: 39px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    padding: 12px 0 14px;
+    font-size: 18px;
+    line-height: 1;
+    background-color: #000;
+    color: #fff;
+    width: calc(100% - 40px);
+    max-width: 353px;
+    aspect-ratio: auto;
+    border-radius: 8px;
+  }
+}

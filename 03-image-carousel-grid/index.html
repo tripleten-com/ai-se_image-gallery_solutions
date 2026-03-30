@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./assets/js/index.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__title">
+        <a class="header__link" href="#home">Image Gallery</a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="#carousel" class="nav__link">Carousel</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page__main-content">
+      <section id="home" class="gallery">
+        <h2 class="gallery__title">My Images</h2>
+        <div class="wrapping-row">
+          <ul class="gallery__list wrapping-row__display-contents"></ul>
+          <button class="gallery__new-image-btn">+ New Image</button>
+        </div>
+      </section>
+
+      <section id="carousel" class="carousel">
+        <h2 class="carousel__title">Image Carousel</h2>
+        <div class="carousel__grid">
+          <button
+            type="button"
+            aria-label="Go to previous card in deck"
+            class="carousel__btn carousel__btn_type_left"
+          ></button>
+          <img src="#" alt="" class="carousel__image" />
+          <button
+            type="button"
+            aria-label="Go to next card in deck"
+            class="carousel__btn carousel__btn_type_right"
+          ></button>
+        </div>
+      </section>
+
+      <section id="not-found" class="not-found">
+        <h2 class="not-found__status-code">404</h2>
+        <p class="not-found__text">Sorry, nothing found!</p>
+      </section>
+    </main>
+
+    <template id="image-template">
+      <li class="gallery__list-item">
+        <img class="gallery__image" src="#" alt="" />
+        <button
+          class="gallery__btn gallery__btn_type_like"
+          type="button"
+        ></button>
+        <button
+          class="gallery__btn gallery__btn_type_delete"
+          type="button"
+        ></button>
+      </li>
+    </template>
+  </body>
+</html>
